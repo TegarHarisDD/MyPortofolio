@@ -1,19 +1,19 @@
 [
   {
-    "id": 1,
-    "title": "NLP Text App",
-    "description": "A natural language processing application that demonstrates text analysis capabilities including sentiment analysis, text classification, and language understanding.",
-    "url": "https://textappdemo-cvera5tunwbx8tqu3nhbvy.streamlit.app/",
-    "githubUrl": "https://github.com/TegarHarisDD",
-    "image": "/projects/nlp-app.png",
-    "category": "NLP",
-    "techStack": ["Python", "Streamlit", "NLP", "Machine Learning"],
+    "id": 4,
+    "title": "PT. Mandirijaya Multi Perkasa",
+    "description": "Official company profile website for PT. MANDIRIJAYA MULTI PERKASA, a contractor specializing in aluminium, glass, and general construction services. Features public pages, admin dashboard with Supabase auth, and responsive design.",
+    "url": "https://tegarharisdd.github.io/CompanyProfileMandirijayaMultiPerkasa/#/",
+    "githubUrl": "https://github.com/TegarHarisDD/CompanyProfileMandirijayaMultiPerkasa",
+    "image": "/projects/company-profile-mjm.png",
+    "category": "Web Development",
+    "techStack": ["React", "Vite", "Tailwind CSS", "Supabase", "React Router"],
     "featured": true
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "Obesity Level Prediction",
-    "description": "A machine learning application that predicts obesity levels based on various health indicators and lifestyle factors using predictive modeling techniques.",
+    "description": "A machine learning application that predicts obesity levels based on health indicators and lifestyle factors using Scikit-learn models.",
     "url": "https://obesitylevelappdeployment-e47a9ba5p2xhlrev764p9l.streamlit.app/",
     "githubUrl": "https://github.com/TegarHarisDD",
     "image": "/projects/obesity-app.png",
@@ -22,14 +22,25 @@
     "featured": true
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Cats vs Dogs Classification",
-    "description": "A computer vision application using deep learning to classify images of cats and dogs with high accuracy, demonstrating convolutional neural network implementation.",
+    "description": "A deep learning image classifier using CNNs to distinguish between cat and dog photos, deployed as an interactive Streamlit web app.",
     "url": "https://catsdogsclassificationapp-9h6hwafbquguahqecyqiy2.streamlit.app/",
     "githubUrl": "https://github.com/TegarHarisDD",
     "image": "/projects/cats-dogs-app.png",
-    "category": "Computer Vision",
-    "techStack": ["Python", "Streamlit", "TensorFlow", "CNN", "Computer Vision"],
+    "category": "Machine Learning",
+    "techStack": ["Python", "TensorFlow", "CNN", "Streamlit"],
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "NLP Text Analysis App",
+    "description": "A natural language processing tool for sentiment analysis, text classification, and keyword extraction built with Python and Streamlit.",
+    "url": "https://textappdemo-cvera5tunwbx8tqu3nhbvy.streamlit.app/",
+    "githubUrl": "https://github.com/TegarHarisDD",
+    "image": "/projects/nlp-app.png",
+    "category": "Python & ML",
+    "techStack": ["Python", "Streamlit", "NLP", "Machine Learning"],
     "featured": true
   }
 ]

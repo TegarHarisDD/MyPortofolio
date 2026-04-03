@@ -1,13 +1,16 @@
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import projectsData from '../data/projects.json'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Projects() {
+  const headerRef = useScrollAnimation()
+  const gridRef = useScrollAnimation()
   const categories = ['All', ...new Set(projectsData.map(p => p.category))]
 
   return (
     <section id="projects" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-16 fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-light-text dark:text-dark-text mb-4">
             Featured Projects
           </h2>
@@ -16,7 +19,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
           {projectsData.map((project, index) => (
             <div
               key={project.id}

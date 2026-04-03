@@ -1,12 +1,16 @@
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiExternalLink, FiDownload } from 'react-icons/fi'
 import profileData from '../data/profile.json'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Hero() {
+  const heroRef = useScrollAnimation()
+  const imageRef = useScrollAnimation()
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1 animate-slide-up">
+          <div ref={heroRef} className="order-2 md:order-1 fade-in-left">
             <p className="text-sm font-medium text-blue-500 mb-2">Hello, I'm</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-light-text dark:text-dark-text mb-4">
               {profileData.name}
@@ -34,6 +38,15 @@ export default function Hero() {
               >
                 <FiGithub className="w-4 h-4" />
                 GitHub
+              </a>
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-light-border dark:border-dark-border text-light-text dark:text-dark-text hover:bg-light-border dark:hover:bg-dark-border rounded-lg text-sm font-medium transition-colors"
+              >
+                <FiLinkedin className="w-4 h-4" />
+                LinkedIn
               </a>
             </div>
 
@@ -70,8 +83,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative">
+          <div ref={imageRef} className="order-1 md:order-2 flex justify-center">
+            <div className="relative animate-float">
               <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
                 <div className="w-full h-full rounded-full bg-light-card dark:bg-dark-card flex items-center justify-center overflow-hidden">
                   <img
@@ -85,24 +98,7 @@ export default function Hero() {
                   />
                 </div>
               </div>
-              <div className="absolute -bottom-2 -right-2 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg shadow-lg">
-                Age: {profileData.age}
-              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-16 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          <h2 className="text-sm font-medium text-light-muted dark:text-dark-muted mb-4 uppercase tracking-wider">Skills</h2>
-          <div className="flex flex-wrap gap-2">
-            {profileData.skills.map(skill => (
-              <span
-                key={skill}
-                className="px-3 py-1.5 text-sm bg-light-border/50 dark:bg-dark-border/50 text-light-text dark:text-dark-text rounded-full"
-              >
-                {skill}
-              </span>
-            ))}
           </div>
         </div>
       </div>

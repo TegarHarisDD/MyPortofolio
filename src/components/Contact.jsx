@@ -1,7 +1,11 @@
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
 import profileData from '../data/profile.json'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Contact() {
+  const headerRef = useScrollAnimation()
+  const gridRef = useScrollAnimation()
+  const ctaRef = useScrollAnimation()
   const contactItems = [
     { icon: <FiMail className="w-5 h-5" />, label: 'Email', value: profileData.email, href: `mailto:${profileData.email}` },
     { icon: <FiPhone className="w-5 h-5" />, label: 'Phone', value: profileData.phone, href: `tel:${profileData.phone}` },
@@ -13,7 +17,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-16 fade-in">
           <h2 className="text-3xl sm:text-4xl font-bold text-light-text dark:text-dark-text mb-4">
             Get in Touch
           </h2>
@@ -22,7 +26,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto fade-in">
           {contactItems.map((item, index) => (
             <div
               key={item.label}
@@ -52,7 +56,7 @@ export default function Contact() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div ref={ctaRef} className="mt-16 text-center fade-in">
           <a
             href={`mailto:${profileData.email}`}
             className="inline-flex items-center gap-2 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors"

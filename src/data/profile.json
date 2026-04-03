@@ -1,33 +1,53 @@
 {
   "name": "Tegar Haris DD",
   "age": 21,
-  "title": "AI & Machine Learning Developer",
-  "bio": "Passionate about building intelligent systems and turning data into actionable insights. Experienced in NLP, computer vision, and machine learning model development. Always learning, always building.",
-  "longBio": "I'm a 21-year-old developer with a strong focus on artificial intelligence and machine learning. My expertise spans across natural language processing, computer vision, and predictive modeling. I enjoy creating end-to-end ML solutions from data preprocessing to deployment.",
-  "email": "your-email@example.com",
-  "phone": "+62-xxx-xxxx-xxxx",
+  "title": "Junior Front-End Developer & ML Engineer",
+  "bio": "A junior front-end developer specializing in React, with growing expertise in Python and machine learning. I love building clean, responsive UIs and exploring the world of AI.",
+  "longBio": "I'm a 21-year-old developer passionate about crafting modern web experiences with React and JavaScript. Alongside front-end development, I've been diving into Python and machine learning, building prediction models and data-driven applications. I'm eager to grow as a developer and contribute to meaningful projects.",
+  "email": "tegarharisdd@gmail.com",
+  "phone": "+62 857-1247-0617",
   "location": "Indonesia",
   "github": "https://github.com/TegarHarisDD",
-  "linkedin": "https://linkedin.com/in/your-linkedin",
+  "linkedin": "https://linkedin.com/in/tegarharisdd",
   "profileImage": "/profile.jpg",
-  "skills": [
-    "Python",
-    "Machine Learning",
-    "Deep Learning",
-    "Natural Language Processing",
-    "Computer Vision",
-    "TensorFlow",
-    "PyTorch",
-    "Scikit-learn",
-    "Streamlit",
-    "Data Analysis",
-    "SQL",
-    "Git"
-  ],
+  "skills": {
+    "frontend": [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Vite",
+      "Git"
+    ],
+    "backend": [
+      "Python",
+      "Node.js",
+      "FastAPI",
+      "REST APIs",
+      "Streamlit"
+    ],
+    "mlEngineer": [
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "Pandas",
+      "NumPy",
+      "Data Preprocessing",
+      "Python",
+      "Model Training"
+    ],
+    "tools": [
+      "VS Code",
+      "GitHub",
+      "Figma",
+      "npm"
+    ]
+  },
   "education": {
-    "degree": "Your Degree",
-    "university": "Your University",
-    "year": "2021 - Present"
+    "degree": "Bachelor of Computer Science",
+    "university": "Dian Nuswantoro University",
+    "year": "2021 - 2026"
   },
   "languages": [
     "Indonesian (Native)",
