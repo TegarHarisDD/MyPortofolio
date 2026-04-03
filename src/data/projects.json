@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "NLP Text App",
+    "description": "A natural language processing application that demonstrates text analysis capabilities including sentiment analysis, text classification, and language understanding.",
+    "url": "https://textappdemo-cvera5tunwbx8tqu3nhbvy.streamlit.app/",
+    "githubUrl": "https://github.com/TegarHarisDD",
+    "image": "/projects/nlp-app.png",
+    "category": "NLP",
+    "techStack": ["Python", "Streamlit", "NLP", "Machine Learning"],
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Obesity Level Prediction",
+    "description": "A machine learning application that predicts obesity levels based on various health indicators and lifestyle factors using predictive modeling techniques.",
+    "url": "https://obesitylevelappdeployment-e47a9ba5p2xhlrev764p9l.streamlit.app/",
+    "githubUrl": "https://github.com/TegarHarisDD",
+    "image": "/projects/obesity-app.png",
+    "category": "Machine Learning",
+    "techStack": ["Python", "Streamlit", "Scikit-learn", "Pandas"],
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Cats vs Dogs Classification",
+    "description": "A computer vision application using deep learning to classify images of cats and dogs with high accuracy, demonstrating convolutional neural network implementation.",
+    "url": "https://catsdogsclassificationapp-9h6hwafbquguahqecyqiy2.streamlit.app/",
+    "githubUrl": "https://github.com/TegarHarisDD",
+    "image": "/projects/cats-dogs-app.png",
+    "category": "Computer Vision",
+    "techStack": ["Python", "Streamlit", "TensorFlow", "CNN", "Computer Vision"],
+    "featured": true
+  }
+]

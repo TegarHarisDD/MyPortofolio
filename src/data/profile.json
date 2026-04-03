@@ -1,0 +1,36 @@
+{
+  "name": "Tegar Haris DD",
+  "age": 21,
+  "title": "AI & Machine Learning Developer",
+  "bio": "Passionate about building intelligent systems and turning data into actionable insights. Experienced in NLP, computer vision, and machine learning model development. Always learning, always building.",
+  "longBio": "I'm a 21-year-old developer with a strong focus on artificial intelligence and machine learning. My expertise spans across natural language processing, computer vision, and predictive modeling. I enjoy creating end-to-end ML solutions from data preprocessing to deployment.",
+  "email": "your-email@example.com",
+  "phone": "+62-xxx-xxxx-xxxx",
+  "location": "Indonesia",
+  "github": "https://github.com/TegarHarisDD",
+  "linkedin": "https://linkedin.com/in/your-linkedin",
+  "profileImage": "/profile.jpg",
+  "skills": [
+    "Python",
+    "Machine Learning",
+    "Deep Learning",
+    "Natural Language Processing",
+    "Computer Vision",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Streamlit",
+    "Data Analysis",
+    "SQL",
+    "Git"
+  ],
+  "education": {
+    "degree": "Your Degree",
+    "university": "Your University",
+    "year": "2021 - Present"
+  },
+  "languages": [
+    "Indonesian (Native)",
+    "English (Proficient)"
+  ]
+}
