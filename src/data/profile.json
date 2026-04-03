@@ -18,30 +18,38 @@
       "CSS",
       "Tailwind CSS",
       "Vite",
-      "Git"
+      "React Router",
+      "Responsive Design"
     ],
     "backend": [
       "Python",
-      "Node.js",
-      "FastAPI",
-      "REST APIs",
-      "Streamlit"
+      "Streamlit",
+      "Supabase",
+      "SQL",
+      "PostgreSQL",
+      "Authentication",
+      "REST APIs"
     ],
     "mlEngineer": [
       "Scikit-learn",
       "TensorFlow",
-      "PyTorch",
       "Pandas",
-      "NumPy",
-      "Data Preprocessing",
-      "Python",
-      "Model Training"
+      "Deep Learning",
+      "NLP",
+      "Computer Vision",
+      "Data Visualization",
+      "Data Analysis",
+      "Matplotlib",
+      "Jupyter Notebook",
+      "Google Colab"
     ],
     "tools": [
       "VS Code",
       "GitHub",
+      "Git",
       "Figma",
-      "npm"
+      "npm",
+      "Markdown"
     ]
   },
   "education": {

@@ -7,7 +7,7 @@
     "githubUrl": "https://github.com/TegarHarisDD/CompanyProfileMandirijayaMultiPerkasa",
     "image": "/projects/company-profile-mjm.png",
     "category": "Web Development",
-    "techStack": ["React", "Vite", "Tailwind CSS", "Supabase", "React Router"],
+    "techStack": ["JavaScript", "React", "HTML", "CSS", "Tailwind CSS", "Vite", "React Router", "Supabase", "SQL", "REST APIs", "Authentication"],
     "featured": true
   },
   {
@@ -18,7 +18,7 @@
     "githubUrl": "https://github.com/TegarHarisDD",
     "image": "/projects/obesity-app.png",
     "category": "Machine Learning",
-    "techStack": ["Python", "Streamlit", "Scikit-learn", "Pandas"],
+    "techStack": ["Python", "Streamlit", "Scikit-learn", "Pandas", "Data Analysis", "Data Visualization", "Matplotlib", "Jupyter Notebook"],
     "featured": true
   },
   {
@@ -29,7 +29,7 @@
     "githubUrl": "https://github.com/TegarHarisDD",
     "image": "/projects/cats-dogs-app.png",
     "category": "Machine Learning",
-    "techStack": ["Python", "TensorFlow", "CNN", "Streamlit"],
+    "techStack": ["Python", "TensorFlow", "Deep Learning", "Computer Vision", "CNN", "Google Colab", "Streamlit", "Jupyter Notebook"],
     "featured": true
   },
   {
@@ -40,7 +40,7 @@
     "githubUrl": "https://github.com/TegarHarisDD",
     "image": "/projects/nlp-app.png",
     "category": "Python & ML",
-    "techStack": ["Python", "Streamlit", "NLP", "Machine Learning"],
+    "techStack": ["Python", "Streamlit", "NLP", "Pandas", "Data Analysis", "Data Visualization", "Jupyter Notebook"],
     "featured": true
   }
 ]
