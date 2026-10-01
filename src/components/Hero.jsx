@@ -81,10 +81,6 @@ export default function Hero() {
                   />
                 </div>
               </div>
-              <figcaption className="mt-3 flex items-center justify-between font-mono text-[0.7rem] tracking-ledger text-muted">
-                <span>fig. 01 — t.h.damarendra</span>
-                <span className="text-accent">*</span>
-              </figcaption>
             </figure>
           </div>
         </div>
