@@ -1,64 +1,123 @@
 {
-  "name": "Tegar Haris DD",
-  "age": 21,
-  "title": "Junior Front-End Developer & ML Engineer",
-  "bio": "A junior front-end developer specializing in React, with growing expertise in Python and machine learning. I love building clean, responsive UIs and exploring the world of AI.",
-  "longBio": "I'm a 21-year-old developer passionate about crafting modern web experiences with React and JavaScript. Alongside front-end development, I've been diving into Python and machine learning, building prediction models and data-driven applications. I'm eager to grow as a developer and contribute to meaningful projects.",
+  "name": "Tegar Haris Damai Damarendra",
+  "title": "Junior Software & AI Engineer",
+  "bio": "Software & AI Engineer with 1 year of experience building full stack web applications with JavaScript, React, and Node.js, and applying artificial intelligence with Python, pandas, and scikit-learn to solve data-driven problems.",
+  "longBio": "Software & AI Engineer with 1 year of experience building full stack web applications with JavaScript, React, and Node.js, and applying artificial intelligence (AI) with Python, pandas, and scikit-learn to solve data-driven problems. Comfortable working across the stack, from accessible UI components to REST APIs, with a growing focus on bringing AI into real-world products. A fast learner who thrives on pair programming, code review, and Agile teamwork, aiming to build a career as an AI Engineer that blends strong software engineering with applied AI.",
   "email": "tegarharisdd@gmail.com",
   "phone": "+62 857-1247-0617",
-  "location": "Indonesia",
+  "location": "Patukangan, Kendal, Central Java, Indonesia",
   "github": "https://github.com/TegarHarisDD",
   "linkedin": "https://linkedin.com/in/tegarharisdd",
   "profileImage": "/MyPortofolio/profile.png",
   "skills": {
-    "frontend": [
-      "React",
+    "programmingLanguages": [
       "JavaScript",
+      "TypeScript",
       "HTML",
       "CSS",
-      "Tailwind CSS",
+      "Python",
+      "C++"
+    ],
+    "frontend": [
+      "React",
       "Vite",
-      "React Router",
-      "Responsive Design"
+      "Tailwind CSS"
     ],
     "backend": [
-      "Python",
-      "Streamlit",
-      "Supabase",
-      "SQL",
-      "PostgreSQL",
-      "Authentication",
-      "REST APIs"
+      "Node.js",
+      "FastAPI",
+      "Supabase"
     ],
-    "mlEngineer": [
-      "Scikit-learn",
-      "TensorFlow",
-      "Pandas",
-      "Deep Learning",
-      "NLP",
-      "Computer Vision",
-      "Data Visualization",
-      "Data Analysis",
-      "Matplotlib",
-      "Jupyter Notebook",
-      "Google Colab"
+    "databases": [
+      "MongoDB",
+      "Supabase",
+      "PostgreSQL",
+      "MySQL",
+      "NoSQL"
     ],
     "tools": [
-      "VS Code",
-      "GitHub",
       "Git",
-      "Figma",
-      "npm",
-      "Markdown"
+      "GitHub / GitLab",
+      "Docker (basics)",
+      "Vercel",
+      "GitHub Actions (CI/CD)",
+      "Streamlit",
+      "Render"
+    ],
+    "languages": [
+      "Bahasa Indonesia (Native)",
+      "English (Advanced)"
     ]
   },
   "education": {
     "degree": "Bachelor of Computer Science",
     "university": "Dian Nuswantoro University",
-    "year": "2021 - 2026"
+    "location": "Semarang, Indonesia",
+    "year": "2022 – 2026",
+    "gpa": "3.71 / 4.00"
   },
-  "languages": [
-    "Indonesian (Native)",
-    "English (Proficient)"
+  "experience": [
+    {
+      "role": "Data Annotator",
+      "period": "Apr 2026 – Sep 2026",
+      "company": "English Data Project",
+      "location": "Surakarta (Full-Time)",
+      "points": [
+        "Labeled and annotated large-scale datasets in accordance with defined project guidelines.",
+        "Consistently validated content accuracy against quality standards and deadlines, ensuring high-integrity training data."
+      ]
+    },
+    {
+      "role": "Data Automation Intern",
+      "period": "Jul 2025",
+      "company": "BPS (Badan Pusat Statistik), Semarang City",
+      "location": "Semarang (Internship)",
+      "points": [
+        "Designed and developed an automated Telegram chatbot prototype using n8n workflow automation.",
+        "Integrated the chatbot with an LLM (Large Language Model) API to generate efficient, data-driven, and interactive automated responses.",
+        "Configured Webhook and ngrok for real-time data exchange between the chatbot and backend services.",
+        "Tools: Excel, Python, n8n, Telegram Bot API, Webhook, ngrok."
+      ]
+    },
+    {
+      "role": "Web Developer Intern",
+      "period": "Nov 2025 – Dec 2025",
+      "company": "PT. Mandirijaya Multi Perkasa",
+      "location": "Semarang (Internship)",
+      "points": [
+        "Designed and developed a responsive company profile website using React and Tailwind CSS.",
+        "Built and managed the backend database using Supabase (PostgreSQL).",
+        "Set up a CI/CD pipeline with GitHub Actions for automated deployment.",
+        "Live project: tegarharisdd.github.io/CompanyProfileMandirijayaMultiPerkasa."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Certificate of Competence (Data Scientist)",
+      "issuer": "Dian Nuswantoro University Professional Certification Institution (LSP)",
+      "detail": "Valid until 12 September 2028"
+    },
+    {
+      "title": "TOEFL, Score 513",
+      "issuer": "CFLT Universitas Dian Nuswantoro",
+      "detail": "Valid until 26 June 2027"
+    },
+    {
+      "title": "EF SET English Certificate, Score 69",
+      "issuer": "EF SET",
+      "detail": "cert.efset.org/en/qVERES",
+      "url": "https://cert.efset.org/en/qVERES"
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Dinus Robotic Club",
+      "role": "Member (2023–2026)"
+    },
+    {
+      "name": "IEEE Student Branch",
+      "role": "Member (2024–2025), Chair (2025–2026)"
+    }
   ]
 }

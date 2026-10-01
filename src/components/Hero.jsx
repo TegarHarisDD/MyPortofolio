@@ -1,104 +1,93 @@
-import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiExternalLink, FiDownload } from 'react-icons/fi'
+import { FiArrowUpRight } from 'react-icons/fi'
 import profileData from '../data/profile.json'
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Hero() {
-  const heroRef = useScrollAnimation()
-  const imageRef = useScrollAnimation()
+  const d = (n) => ({ animationDelay: `${n}s` })
+
+  const specimen = [
+    { label: 'based', value: profileData.location },
+    { label: 'focus', value: 'Full stack web · Applied AI' },
+    { label: 'languages', value: 'Bahasa Indonesia (Native) · English (Advanced)' },
+    { label: 'status', value: 'Open to opportunities' },
+  ]
+
+  const contacts = [
+    { label: 'Email', href: `mailto:${profileData.email}` },
+    { label: 'GitHub', href: profileData.github },
+    { label: 'LinkedIn', href: profileData.linkedin },
+  ]
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div ref={heroRef} className="order-2 md:order-1 fade-in-left">
-            <p className="text-sm font-medium text-blue-500 mb-2">Hello, I'm</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-light-text dark:text-dark-text mb-4">
-              {profileData.name}
-            </h1>
-            <p className="text-xl text-light-muted dark:text-dark-muted mb-2">
+    <section id="home" className="pt-28 sm:pt-32 pb-16">
+      <div className="max-w-[1180px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="h-px w-full bg-line load-rule" aria-hidden="true" />
+
+        <div className="flex flex-wrap items-baseline justify-between gap-2 pt-5 rise" style={d(0.2)}>
+          <span className="ledger-label">software · artificial intelligence</span>
+          <span className="ledger-label">portfolio / 2026</span>
+        </div>
+
+        <h1 className="mt-14 font-display font-normal tracking-[-0.03em] text-ink leading-[0.95] text-[clamp(2.75rem,10vw,7rem)]">
+          <span className="block rise" style={d(0.3)}>Tegar Haris</span>
+          <span className="block rise" style={d(0.42)}>Damai Damarendra</span>
+        </h1>
+
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-14">
+          <div className="lg:col-span-7">
+            <p className="rise font-display text-xl sm:text-2xl leading-snug text-ink max-w-[22ch]" style={d(0.56)}>
               {profileData.title}
             </p>
-            <p className="text-light-muted dark:text-dark-muted mb-6 max-w-lg">
+            <p className="rise mt-7 max-w-[58ch] text-base leading-relaxed text-muted" style={d(0.64)}>
               {profileData.bio}
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
-              <a
-                href={`mailto:${profileData.email}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors"
-              >
-                <FiMail className="w-4 h-4" />
-                Get in Touch
-              </a>
-              <a
-                href={profileData.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-light-border dark:border-dark-border text-light-text dark:text-dark-text hover:bg-light-border dark:hover:bg-dark-border rounded-lg text-sm font-medium transition-colors"
-              >
-                <FiGithub className="w-4 h-4" />
-                GitHub
-              </a>
-              <a
-                href={profileData.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-light-border dark:border-dark-border text-light-text dark:text-dark-text hover:bg-light-border dark:hover:bg-dark-border rounded-lg text-sm font-medium transition-colors"
-              >
-                <FiLinkedin className="w-4 h-4" />
-                LinkedIn
-              </a>
+            <div className="rise mt-10 flex flex-wrap items-center gap-x-6 gap-y-3" style={d(0.74)}>
+              {contacts.map((c) => (
+                <a
+                  key={c.label}
+                  href={c.href}
+                  target={c.href.startsWith('mailto') ? undefined : '_blank'}
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-1 font-mono text-xs tracking-ledger text-muted hover:text-ink transition-colors"
+                >
+                  <span className="u-link">{c.label}</span>
+                  <FiArrowUpRight className="w-3.5 h-3.5 text-accent transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              ))}
             </div>
 
-            <div className="flex items-center gap-6 text-light-muted dark:text-dark-muted">
-              <a
-                href={profileData.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-light-text dark:hover:text-dark-text transition-colors"
-                aria-label="GitHub"
-              >
-                <FiGithub className="w-5 h-5" />
-              </a>
-              <a
-                href={profileData.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-light-text dark:hover:text-dark-text transition-colors"
-                aria-label="LinkedIn"
-              >
-                <FiLinkedin className="w-5 h-5" />
-              </a>
-              <a
-                href={`mailto:${profileData.email}`}
-                className="hover:text-light-text dark:hover:text-dark-text transition-colors"
-                aria-label="Email"
-              >
-                <FiMail className="w-5 h-5" />
-              </a>
-              <span className="flex items-center gap-1 text-sm">
-                <FiMapPin className="w-4 h-4" />
-                {profileData.location}
-              </span>
-            </div>
+            <dl className="rise mt-12 max-w-xl" style={d(0.84)}>
+              {specimen.map((row) => (
+                <div
+                  key={row.label}
+                  className="grid grid-cols-[5.5rem_1fr] gap-4 border-t border-line py-3 last:border-b"
+                >
+                  <dt className="font-mono text-[0.7rem] tracking-ledger text-muted pt-1">{row.label}</dt>
+                  <dd className="text-sm text-ink leading-relaxed">{row.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
-          <div ref={imageRef} className="order-1 md:order-2 flex justify-center">
-            <div className="relative animate-float">
-              <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
-                <div className="w-full h-full rounded-full bg-light-card dark:bg-dark-card flex items-center justify-center overflow-hidden">
+          <div className="lg:col-span-5 lg:pl-6">
+            <figure className="rise" style={d(0.7)}>
+              <div className="border border-line bg-surface p-3">
+                <div className="aspect-[4/5] overflow-hidden bg-line">
                   <img
                     src={profileData.profileImage}
-                    alt={profileData.name}
-                    className="w-full h-full object-cover rounded-full"
+                    alt={`Portrait of ${profileData.name}`}
+                    className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.target.style.display = 'none'
-                      e.target.parentElement.innerHTML = `<span class="text-6xl font-bold text-light-muted dark:text-dark-muted">${profileData.name.split(' ').map(n => n[0]).join('')}</span>`
+                      e.currentTarget.style.display = 'none'
                     }}
                   />
                 </div>
               </div>
-            </div>
+              <figcaption className="mt-3 flex items-center justify-between font-mono text-[0.7rem] tracking-ledger text-muted">
+                <span>fig. 01 — t.h.damarendra</span>
+                <span className="text-accent">*</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

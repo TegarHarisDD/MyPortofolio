@@ -1,6 +1,6 @@
 # My Portfolio
 
-A modern, responsive personal portfolio website built with React and Tailwind CSS. Showcasing my skills, projects, and experience as a Junior Front-End Developer & ML Engineer.
+A personal portfolio for **Tegar Haris Damai Damarendra**, a Junior Software & AI Engineer. Built with React, Vite, and Tailwind CSS with an editorial, ledger-inspired visual identity and a blue/white palette.
 
 ## Live Demo
 
@@ -8,69 +8,25 @@ A modern, responsive personal portfolio website built with React and Tailwind CS
 
 ## Features
 
-- 🎨 Modern, clean UI with dark/light theme support
-- 📱 Fully responsive design for all screen sizes
-- ✨ Smooth scroll animations
-- 📂 Project showcase with live demos and source links
-- 🛠️ Interactive skills section with categorized technologies
-- 📧 Contact section with social links
-- 📜 Certificates section
+- 🧭 Single-page layout: About, Skills, Experience, Certificates, and Contact
+- 🌗 Light/dark theme with an inverted "blueprint" dark mode
+- 📱 Fully responsive, with a sticky section index in the navbar
+- ✍️ Editorial typography (Fraunces, Space Grotesk, IBM Plex Mono)
+- 🎞️ One orchestrated hero load and a single restrained scroll reveal
+- ♿ Respects `prefers-reduced-motion` and keyboard focus states
 
 ## Tech Stack
 
-### Frontend
-- **React** - UI library
-- **JavaScript** - Core language
-- **HTML/CSS** - Web fundamentals
-- **Tailwind CSS** - Utility-first CSS framework
-- **Vite** - Fast build tool and dev server
-- **React Router** - Client-side routing
-- **React Icons** - Icon library
-
-### Development
-- **Git & GitHub** - Version control & hosting
-- **npm** - Package management
-
-## Skills
-
-### Front-End
-React, JavaScript, HTML, CSS, Tailwind CSS, Vite, React Router, Responsive Design
-
-### Back-End
-Python, Streamlit, Supabase, SQL, PostgreSQL, Authentication, REST APIs
-
-### ML Engineer
-Scikit-learn, TensorFlow, Pandas, Deep Learning, NLP, Computer Vision, Data Visualization, Data Analysis, Matplotlib, Jupyter Notebook, Google Colab
-
-### Tools & Others
-VS Code, GitHub, Git, Figma, npm, Markdown
-
-## Projects
-
-### PT. Mandirijaya Multi Perkasa
-Official company profile website with admin dashboard and Supabase authentication.
-- **Tech:** JavaScript, React, HTML, CSS, Tailwind CSS, Vite, React Router, Supabase, SQL, REST APIs, Authentication
-- [Live Demo](https://tegarharisdd.github.io/CompanyProfileMandirijayaMultiPerkasa/#/) | [Source Code](https://github.com/TegarHarisDD/CompanyProfileMandirijayaMultiPerkasa)
-
-### Obesity Level Prediction
-Machine learning application that predicts obesity levels based on health indicators and lifestyle factors.
-- **Tech:** Python, Streamlit, Scikit-learn, Pandas, Data Analysis, Data Visualization, Matplotlib, Jupyter Notebook
-- [Live Demo](https://obesitylevelappdeployment-e47a9ba5p2xhlrev764p9l.streamlit.app/)
-
-### Cats vs Dogs Classification
-Deep learning image classifier using CNNs to distinguish between cat and dog photos.
-- **Tech:** Python, TensorFlow, Deep Learning, Computer Vision, CNN, Google Colab, Streamlit, Jupyter Notebook
-- [Live Demo](https://catsdogsclassificationapp-9h6hwafbquguahqecyqiy2.streamlit.app/)
-
-### NLP Text Analysis App
-Natural language processing tool for sentiment analysis, text classification, and keyword extraction.
-- **Tech:** Python, Streamlit, NLP, Pandas, Data Analysis, Data Visualization, Jupyter Notebook
-- [Live Demo](https://textappdemo-cvera5tunwbx8tqu3nhbvy.streamlit.app/)
+- **React** — UI library
+- **Vite** — Build tool and dev server
+- **Tailwind CSS** — Utility-first styling with CSS-variable color tokens
+- **React Icons** — Icon library
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
+
+- Node.js (v18 or higher)
 - npm
 
 ### Installation
@@ -91,14 +47,16 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to the URL printed by Vite (the site is served under `/MyPortofolio/`).
 
 ### Build for Production
+
 ```bash
 npm run build
 ```
 
 ### Preview Production Build
+
 ```bash
 npm run preview
 ```
@@ -111,20 +69,20 @@ src/
 │   ├── About.jsx
 │   ├── Certificates.jsx
 │   ├── Contact.jsx
+│   ├── Experience.jsx
 │   ├── Footer.jsx
 │   ├── Hero.jsx
 │   ├── Navbar.jsx
-│   ├── Projects.jsx
+│   ├── Section.jsx        # Shared section shell (margin label + hairline reveal)
 │   └── Skills.jsx
-├── data/            # JSON data files
-│   ├── profile.json
-│   └── projects.json
-├── hooks/           # Custom React hooks
+├── data/
+│   └── profile.json       # All portfolio content
+├── hooks/
 │   ├── useScrollAnimation.jsx
 │   └── useTheme.jsx
-├── App.jsx          # Main app component
-├── main.jsx         # Entry point
-└── index.css        # Global styles
+├── App.jsx
+├── main.jsx
+└── index.css              # Design tokens, reveal/load animations, utilities
 ```
 
 ## Contact
@@ -132,7 +90,3 @@ src/
 - **Email:** tegarharisdd@gmail.com
 - **LinkedIn:** [tegarharisdd](https://linkedin.com/in/tegarharisdd)
 - **GitHub:** [TegarHarisDD](https://github.com/TegarHarisDD)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).

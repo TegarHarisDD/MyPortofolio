@@ -7,80 +7,88 @@ export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
+    const handleScroll = () => setScrolled(window.scrollY > 24)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-          const navLinks = [
-            { label: 'Home', href: '#home' },
-            { label: 'About', href: '#about' },
-            { label: 'Skills', href: '#skills' },
-            { label: 'Projects', href: '#projects' },
-            { label: 'Certificates', href: '#certificates' },
-            { label: 'Contact', href: '#contact' },
-          ]
+  const navLinks = [
+    { index: '01', label: 'About', href: '#about' },
+    { index: '02', label: 'Skills', href: '#skills' },
+    { index: '03', label: 'Experience', href: '#experience' },
+    { index: '04', label: 'Certificates', href: '#certificates' },
+    { index: '05', label: 'Contact', href: '#contact' },
+  ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md border-b border-light-border dark:border-dark-border' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        scrolled
+          ? 'paper-veil backdrop-blur-md border-b border-line'
+          : 'border-b border-transparent'
+      }`}
+    >
+      <div className="max-w-[1180px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="text-lg font-semibold text-light-text dark:text-dark-text">
-            {profileData.name.split(' ')[0]}<span className="text-blue-500">.</span>
+          <a href="#home" className="group flex items-baseline gap-2">
+            <span className="font-display text-lg font-medium tracking-tight text-ink">
+              Tegar Haris
+            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-accent transition-transform duration-300 group-hover:scale-150" />
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => (
+          <div className="hidden md:flex items-center gap-7">
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text transition-colors"
+                className="group flex items-baseline gap-1.5 font-mono text-[0.7rem] tracking-ledger text-muted hover:text-ink transition-colors"
               >
-                {link.label}
+                <span className="text-accent tabular">{link.index}</span>
+                <span className="u-link">{link.label}</span>
               </a>
             ))}
+            <span className="w-px h-4 bg-line" aria-hidden="true" />
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-light-border dark:hover:bg-dark-border transition-colors"
+              className="p-1.5 -mr-1.5 text-muted hover:text-ink transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <FiSun className="w-5 h-5 text-dark-text" /> : <FiMoon className="w-5 h-5 text-light-text" />}
+              {theme === 'dark' ? <FiSun className="w-4 h-4" /> : <FiMoon className="w-4 h-4" />}
             </button>
           </div>
 
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-light-border dark:hover:bg-dark-border transition-colors"
+              className="p-1.5 text-muted hover:text-ink transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <FiSun className="w-5 h-5 text-dark-text" /> : <FiMoon className="w-5 h-5 text-light-text" />}
+              {theme === 'dark' ? <FiSun className="w-4 h-4" /> : <FiMoon className="w-4 h-4" />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg hover:bg-light-border dark:hover:bg-dark-border transition-colors"
+              className="p-1.5 text-ink"
               aria-label="Toggle menu"
             >
-              {isOpen ? <FiX className="w-5 h-5 text-light-text dark:text-dark-text" /> : <FiMenu className="w-5 h-5 text-light-text dark:text-dark-text" />}
+              {isOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
             </button>
           </div>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-light-card/95 dark:bg-dark-card/95 backdrop-blur-md border-b border-light-border dark:border-dark-border">
-          <div className="px-4 py-4 space-y-2">
-            {navLinks.map(link => (
+        <div className="md:hidden paper-veil-strong backdrop-blur-md border-b border-line">
+          <div className="px-6 py-4 space-y-1">
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-sm text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text hover:bg-light-border dark:hover:bg-dark-border rounded-lg transition-colors"
+                className="flex items-baseline gap-3 py-2 font-mono text-xs tracking-ledger text-muted hover:text-ink transition-colors"
               >
+                <span className="text-accent tabular">{link.index}</span>
                 {link.label}
               </a>
             ))}

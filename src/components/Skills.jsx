@@ -1,68 +1,51 @@
-import { useState } from 'react'
+import Section from './Section'
 import profileData from '../data/profile.json'
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Skills() {
-  const headerRef = useScrollAnimation()
-  const gridRef = useScrollAnimation()
-  const skillCategories = [
-    { key: 'frontend', label: 'Front-End', color: 'blue' },
-    { key: 'backend', label: 'Back-End', color: 'green' },
-    { key: 'mlEngineer', label: 'ML Engineer', color: 'purple' },
-    { key: 'tools', label: 'Tools & Others', color: 'orange' }
+  const categories = [
+    { key: 'programmingLanguages', label: 'Programming Languages' },
+    { key: 'frontend', label: 'Frontend' },
+    { key: 'backend', label: 'Backend' },
+    { key: 'databases', label: 'Databases' },
+    { key: 'tools', label: 'Tools & Practices' },
+    { key: 'languages', label: 'Languages' },
   ]
 
-  const [activeCategory, setActiveCategory] = useState('frontend')
-
-  const colorMap = {
-    blue: { bg: 'bg-blue-500/10', text: 'text-blue-500', border: 'border-blue-500' },
-    green: { bg: 'bg-green-500/10', text: 'text-green-500', border: 'border-green-500' },
-    purple: { bg: 'bg-purple-500/10', text: 'text-purple-500', border: 'border-purple-500' },
-    orange: { bg: 'bg-orange-500/10', text: 'text-orange-500', border: 'border-orange-500' }
-  }
-
   return (
-    <section id="skills" className="py-20 bg-light-card/50 dark:bg-dark-card/50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={headerRef} className="text-center mb-16 fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold text-light-text dark:text-dark-text mb-4">
-            Skills & Technologies
-          </h2>
-          <p className="text-light-muted dark:text-dark-muted max-w-2xl mx-auto">
-            My technical toolkit across front-end development, Python, and machine learning.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {skillCategories.map(cat => (
-            <button
-              key={cat.key}
-              onClick={() => setActiveCategory(cat.key)}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                activeCategory === cat.key
-                  ? `${colorMap[cat.color].bg} ${colorMap[cat.color].text} border ${colorMap[cat.color].border}`
-                  : 'text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-
-        <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
-          {profileData.skills[activeCategory].map((skill, index) => (
+    <Section
+      id="skills"
+      label="skills"
+      title="The toolkit, grouped as it's actually used."
+      intro="Six areas that carry a project from interface to data layer and out the door."
+    >
+      <div>
+        {categories.map((cat) => {
+          const items = profileData.skills[cat.key]
+          return (
             <div
-              key={skill}
-              className="p-4 bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg text-center hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-0.5"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              key={cat.key}
+              className="grid md:grid-cols-[12rem_1fr] gap-x-10 gap-y-3 border-t border-line py-6 last:border-b"
             >
-              <span className="text-sm font-medium text-light-text dark:text-dark-text">
-                {skill}
-              </span>
+              <div className="flex items-baseline gap-3">
+                <h3 className="font-display text-lg text-ink">{cat.label}</h3>
+                <span className="font-mono text-[0.65rem] text-muted tabular">
+                  {String(items.length).padStart(2, '0')}
+                </span>
+              </div>
+              <ul className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
+                {items.map((item, i) => (
+                  <li key={item} className="flex items-baseline gap-3">
+                    <span className="text-sm text-ink">{item}</span>
+                    {i < items.length - 1 && (
+                      <span className="text-line select-none" aria-hidden="true">·</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
+          )
+        })}
       </div>
-    </section>
+    </Section>
   )
 }

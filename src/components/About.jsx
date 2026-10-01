@@ -1,94 +1,91 @@
-import { FiCode, FiCpu, FiTerminal } from 'react-icons/fi'
+import Section from './Section'
 import profileData from '../data/profile.json'
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function About() {
-  const headerRef = useScrollAnimation()
-  const cardsRef = useScrollAnimation()
-  const bottomRef = useScrollAnimation()
   const focusAreas = [
     {
-      icon: <FiCode className="w-6 h-6" />,
-      title: 'Front-End Development',
-      description: 'Building responsive and interactive web applications with React, JavaScript, and modern CSS frameworks like Tailwind.'
+      tag: 'web',
+      title: 'Full Stack Web Development',
+      description:
+        'Building full stack web applications with JavaScript, React, Node.js, and Tailwind CSS — from accessible UI components through to REST APIs.',
     },
     {
-      icon: <FiCpu className="w-6 h-6" />,
-      title: 'Machine Learning Engineering',
-      description: 'Developing ML models with Python, TensorFlow, and Scikit-learn. From data preprocessing to model deployment with Streamlit.'
+      tag: 'ai',
+      title: 'Applied AI & Data',
+      description:
+        'Applying artificial intelligence with Python, pandas, and scikit-learn to turn data-driven problems into working, real-world products.',
     },
     {
-      icon: <FiTerminal className="w-6 h-6" />,
-      title: 'Tools & Workflow',
-      description: 'Using Git, GitHub, VS Code, and Figma for version control, collaboration, and design-to-code workflows.'
-    }
+      tag: 'method',
+      title: 'Method & Collaboration',
+      description:
+        'A fast learner who thrives on pair programming, code review, and Agile teamwork, with a growing focus on bringing AI into shipped products.',
+    },
   ]
 
   return (
-    <section id="about" className="py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={headerRef} className="text-center mb-16 fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold text-light-text dark:text-dark-text mb-4">
-            About Me
-          </h2>
-          <p className="text-light-muted dark:text-dark-muted max-w-2xl mx-auto">
-            {profileData.longBio}
-          </p>
-        </div>
-
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 fade-in">
-          {focusAreas.map((area, index) => (
-            <div
-              key={area.title}
-              className="p-6 bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-xl hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1"
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
-              <div className="p-3 bg-blue-500/10 text-blue-500 rounded-lg w-fit mb-4">
-                {area.icon}
-              </div>
-              <h3 className="text-lg font-semibold text-light-text dark:text-dark-text mb-2">
-                {area.title}
-              </h3>
-              <p className="text-sm text-light-muted dark:text-dark-muted">
+    <Section
+      id="about"
+      label="about"
+      title="Full stack by training, applied AI by focus."
+      intro={profileData.longBio}
+    >
+      <div className="space-y-0">
+        {focusAreas.map((area) => (
+          <div
+            key={area.tag}
+            className="grid md:grid-cols-[6.5rem_1fr] gap-x-10 gap-y-2 border-t border-line py-7 last:border-b"
+          >
+            <span className="ledger-label pt-1.5">{area.tag}</span>
+            <div>
+              <h3 className="font-display text-xl sm:text-2xl text-ink">{area.title}</h3>
+              <p className="mt-2 max-w-[58ch] text-sm leading-relaxed text-muted">
                 {area.description}
               </p>
             </div>
-          ))}
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-16 grid md:grid-cols-2 gap-x-12 gap-y-12">
+        <div>
+          <span className="ledger-label">education</span>
+          <div className="mt-5 border-t border-line pt-5">
+            <h3 className="font-display text-2xl text-ink leading-tight">
+              {profileData.education.degree}
+            </h3>
+            <p className="mt-3 text-sm text-ink">{profileData.education.university}</p>
+            <dl className="mt-5 space-y-2 font-mono text-[0.7rem] tracking-ledger text-muted">
+              <div className="flex justify-between gap-4">
+                <dt>location</dt>
+                <dd className="text-ink">{profileData.education.location}</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt>period</dt>
+                <dd className="text-ink tabular">{profileData.education.year}</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt>gpa</dt>
+                <dd className="text-accent tabular">{profileData.education.gpa}</dd>
+              </div>
+            </dl>
+          </div>
         </div>
 
-        <div ref={bottomRef} className="mt-16 grid md:grid-cols-2 gap-8 fade-in">
-          <div className="p-6 bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-xl">
-            <h3 className="text-lg font-semibold text-light-text dark:text-dark-text mb-4">
-              Education
-            </h3>
-            <p className="text-sm text-light-muted dark:text-dark-muted">
-              {profileData.education.degree}
-            </p>
-            <p className="text-sm text-blue-500 font-medium">
-              {profileData.education.university}
-            </p>
-            <p className="text-xs text-light-muted dark:text-dark-muted mt-1">
-              {profileData.education.year}
-            </p>
-          </div>
-
-          <div className="p-6 bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-xl">
-            <h3 className="text-lg font-semibold text-light-text dark:text-dark-text mb-4">
-              Languages
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {profileData.languages.map(lang => (
-                <span
-                  key={lang}
-                  className="px-3 py-1.5 text-sm bg-light-border/50 dark:bg-dark-border/50 text-light-text dark:text-dark-text rounded-full"
-                >
-                  {lang}
-                </span>
+        <div>
+          <span className="ledger-label">languages</span>
+          <div className="mt-5 border-t border-line pt-5">
+            <ul className="space-y-4">
+              {profileData.skills.languages.map((lang) => (
+                <li key={lang} className="flex items-baseline justify-between gap-4 border-b border-line pb-4">
+                  <span className="text-base text-ink">{lang.replace(/\s*\(.*\)$/, '')}</span>
+                  <span className="ledger-label">{lang.match(/\((.*)\)/)?.[1] || ''}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
