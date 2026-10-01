@@ -1,5 +1,5 @@
 {
-  "name": "Tegar Haris Damai Damarendra",
+  "name": "Tegar Haris DD",
   "title": "Junior Software & AI Engineer",
   "bio": "Software & AI Engineer with 1 year of experience building full stack web applications with JavaScript, React, and Node.js, and applying artificial intelligence with Python, pandas, and scikit-learn to solve data-driven problems.",
   "longBio": "Software & AI Engineer with 1 year of experience building full stack web applications with JavaScript, React, and Node.js, and applying artificial intelligence (AI) with Python, pandas, and scikit-learn to solve data-driven problems. Comfortable working across the stack, from accessible UI components to REST APIs, with a growing focus on bringing AI into real-world products. A fast learner who thrives on pair programming, code review, and Agile teamwork, aiming to build a career as an AI Engineer that blends strong software engineering with applied AI.",
@@ -13,10 +13,12 @@
     "programmingLanguages": [
       "JavaScript",
       "TypeScript",
-      "HTML",
-      "CSS",
       "Python",
       "C++"
+    ],
+    "markupStyles": [
+      "HTML",
+      "CSS"
     ],
     "frontend": [
       "React",

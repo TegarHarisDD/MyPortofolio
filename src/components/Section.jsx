@@ -23,7 +23,7 @@ export default function Section({ id, label, title, intro, children }) {
                 {intro}
               </p>
             )}
-            <div className={title || intro ? 'mt-12' : ''}>{children}</div>
+            {children && <div className={title || intro ? 'mt-12' : ''}>{children}</div>}
           </div>
         </div>
       </div>

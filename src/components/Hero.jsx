@@ -6,7 +6,6 @@ export default function Hero() {
 
   const specimen = [
     { label: 'based', value: profileData.location },
-    { label: 'focus', value: 'Full stack web · Applied AI' },
     { label: 'languages', value: 'Bahasa Indonesia (Native) · English (Advanced)' },
     { label: 'status', value: 'Open to opportunities' },
   ]
@@ -28,8 +27,7 @@ export default function Hero() {
         </div>
 
         <h1 className="mt-14 font-display font-normal tracking-[-0.03em] text-ink leading-[0.95] text-[clamp(2.75rem,10vw,7rem)]">
-          <span className="block rise" style={d(0.3)}>Tegar Haris</span>
-          <span className="block rise" style={d(0.42)}>Damai Damarendra</span>
+          <span className="block rise" style={d(0.3)}>Tegar Haris DD</span>
         </h1>
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-14">

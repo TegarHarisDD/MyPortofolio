@@ -17,8 +17,9 @@ export default function Navbar({ theme, toggleTheme }) {
     { index: '01', label: 'About', href: '#about' },
     { index: '02', label: 'Skills', href: '#skills' },
     { index: '03', label: 'Experience', href: '#experience' },
-    { index: '04', label: 'Certificates', href: '#certificates' },
-    { index: '05', label: 'Contact', href: '#contact' },
+    { index: '04', label: 'Education', href: '#education' },
+    { index: '05', label: 'Certificates', href: '#certificates' },
+    { index: '06', label: 'Contact', href: '#contact' },
   ]
 
   return (

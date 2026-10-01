@@ -1,6 +1,6 @@
 # My Portfolio
 
-A personal portfolio for **Tegar Haris Damai Damarendra**, a Junior Software & AI Engineer. Built with React, Vite, and Tailwind CSS with an editorial, ledger-inspired visual identity and a blue/white palette.
+A personal portfolio for **Tegar Haris DD**, a Junior Software & AI Engineer. Built with React, Vite, and Tailwind CSS with an editorial, ledger-inspired visual identity and a blue/white palette.
 
 ## Live Demo
 
@@ -8,7 +8,7 @@ A personal portfolio for **Tegar Haris Damai Damarendra**, a Junior Software & A
 
 ## Features
 
-- 🧭 Single-page layout: About, Skills, Experience, Certificates, and Contact
+- 🧭 Single-page layout: About, Skills, Experience, Education, Certificates, and Contact
 - 🌗 Light/dark theme with an inverted "blueprint" dark mode
 - 📱 Fully responsive, with a sticky section index in the navbar
 - ✍️ Editorial typography (Fraunces, Space Grotesk, IBM Plex Mono)
@@ -69,6 +69,7 @@ src/
 │   ├── About.jsx
 │   ├── Certificates.jsx
 │   ├── Contact.jsx
+│   ├── Education.jsx
 │   ├── Experience.jsx
 │   ├── Footer.jsx
 │   ├── Hero.jsx
