@@ -8,20 +8,38 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Fraunces', 'Georgia', '"Times New Roman"', 'serif'],
-        sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['Inter', 'Geist', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'Geist', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      fontWeight: {
+        strong: '550',
       },
       colors: {
-        paper: 'var(--paper)',
-        surface: 'var(--surface)',
         ink: 'var(--ink)',
-        muted: 'var(--muted)',
-        line: 'var(--line)',
-        accent: 'var(--accent)',
+        'on-ink': 'var(--on-ink)',
+        muted: 'var(--ink-muted)',
+        surface: 'var(--surface)',
+        input: 'var(--surface-input)',
+        chip: 'var(--surface-chip)',
+        hairline: 'var(--hairline)',
+        // aliases kept for gradual migration
+        paper: 'var(--surface)',
+        line: 'var(--hairline)',
+        accent: 'var(--ink)',
+      },
+      borderColor: {
+        DEFAULT: 'var(--hairline)',
+      },
+      borderRadius: {
+        control: '8px',
+        panel: '16px',
+        prompt: '28px',
+        pill: '9999px',
       },
       letterSpacing: {
-        ledger: '0.14em',
+        body: '-0.006em',
+        title: '-0.015em',
+        display: '-0.02em',
       },
     },
   },

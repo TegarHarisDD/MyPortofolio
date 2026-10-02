@@ -11,7 +11,7 @@ A personal portfolio for **Tegar Haris DD**, a Junior Software & AI Engineer. Bu
 - 🧭 Single-page layout: About, Skills, Experience, Education, Certificates, and Contact
 - 🌗 Light/dark theme with an inverted "blueprint" dark mode
 - 📱 Fully responsive, with a sticky section index in the navbar
-- ✍️ Editorial typography (Fraunces, Space Grotesk, IBM Plex Mono)
+- ✍️ Editorial typography pairing: black extended uppercase sans (Archivo) with a thin condensed lowercase serif (Roboto Serif)
 - 🎞️ One orchestrated hero load and a single restrained scroll reveal
 - ♿ Respects `prefers-reduced-motion` and keyboard focus states
 

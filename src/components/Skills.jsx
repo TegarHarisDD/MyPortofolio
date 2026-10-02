@@ -3,19 +3,18 @@ import profileData from '../data/profile.json'
 
 export default function Skills() {
   const categories = [
-    { key: 'programmingLanguages', label: 'Programming Languages' },
-    { key: 'markupStyles', label: 'Markup & stylesheets' },
+    { key: 'programmingLanguages', label: 'Programming languages' },
+    { key: 'markupStyles', label: 'Markup and stylesheets' },
     { key: 'frontend', label: 'Frontend' },
     { key: 'backend', label: 'Backend' },
     { key: 'databases', label: 'Databases' },
-    { key: 'tools', label: 'Tools & Practices' },
+    { key: 'tools', label: 'Tools and practices' },
     { key: 'languages', label: 'Languages' },
   ]
 
   return (
     <Section
       id="skills"
-      label="skills"
       title="The toolkit, grouped as it's actually used."
       intro="Everything that carries a project from interface to data layer and out the door."
     >
@@ -25,18 +24,13 @@ export default function Skills() {
           return (
             <div
               key={cat.key}
-              className="grid md:grid-cols-[12rem_1fr] gap-x-10 gap-y-3 border-t border-line py-6 last:border-b"
+              className="border-t border-hairline py-6 first:border-t-0 first:pt-0"
             >
-              <div>
-                <h3 className="font-display text-lg text-ink">{cat.label}</h3>
-              </div>
-              <ul className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
-                {items.map((item, i) => (
-                  <li key={item} className="flex items-baseline gap-3">
-                    <span className="text-sm text-ink">{item}</span>
-                    {i < items.length - 1 && (
-                      <span className="text-line select-none" aria-hidden="true">·</span>
-                    )}
+              <h3 className="text-sm font-medium text-ink">{cat.label}</h3>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {items.map((item) => (
+                  <li key={item} className="tag">
+                    {item}
                   </li>
                 ))}
               </ul>

@@ -5,7 +5,6 @@ export default function About() {
   return (
     <Section
       id="about"
-      label="about"
       title="Full stack by training, applied AI by focus."
       intro={profileData.longBio}
     />

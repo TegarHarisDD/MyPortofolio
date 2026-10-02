@@ -1,4 +1,3 @@
-import { useTheme } from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,12 +9,10 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
-  const { theme, toggleTheme } = useTheme()
-
   return (
-    <div className="min-h-screen bg-paper transition-colors duration-300">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <main>
+    <div className="relative min-h-[100dvh] bg-surface text-ink">
+      <Navbar />
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />

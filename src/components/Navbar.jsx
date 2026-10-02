@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
 import profileData from '../data/profile.json'
 
-export default function Navbar({ theme, toggleTheme }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -14,82 +14,64 @@ export default function Navbar({ theme, toggleTheme }) {
   }, [])
 
   const navLinks = [
-    { index: '01', label: 'About', href: '#about' },
-    { index: '02', label: 'Skills', href: '#skills' },
-    { index: '03', label: 'Experience', href: '#experience' },
-    { index: '04', label: 'Education', href: '#education' },
-    { index: '05', label: 'Certificates', href: '#certificates' },
-    { index: '06', label: 'Contact', href: '#contact' },
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Education', href: '#education' },
+    { label: 'Certificates', href: '#certificates' },
+    { label: 'Contact', href: '#contact' },
   ]
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? 'paper-veil backdrop-blur-md border-b border-line'
+          ? 'veil backdrop-blur-md border-b border-hairline'
           : 'border-b border-transparent'
       }`}
     >
-      <div className="max-w-[1180px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-16">
-          <a href="#home" className="group flex items-baseline gap-2">
-            <span className="font-display text-lg font-medium tracking-tight text-ink">
-              Tegar Haris
-            </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-accent transition-transform duration-300 group-hover:scale-150" />
+      <div className="mx-auto max-w-[960px] px-6">
+        <div className="flex h-16 items-center justify-between">
+          <a
+            href="#home"
+            className="text-[15px] font-strong tracking-body text-ink"
+          >
+            {profileData.name}
           </a>
 
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="group flex items-baseline gap-1.5 font-mono text-[0.7rem] tracking-ledger text-muted hover:text-ink transition-colors"
-              >
-                <span className="text-accent tabular">{link.index}</span>
-                <span className="u-link">{link.label}</span>
+              <a key={link.href} href={link.href} className="chip">
+                {link.label}
               </a>
             ))}
-            <span className="w-px h-4 bg-line" aria-hidden="true" />
-            <button
-              onClick={toggleTheme}
-              className="p-1.5 -mr-1.5 text-muted hover:text-ink transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <FiSun className="w-4 h-4" /> : <FiMoon className="w-4 h-4" />}
-            </button>
           </div>
 
-          <div className="md:hidden flex items-center gap-3">
-            <button
-              onClick={toggleTheme}
-              className="p-1.5 text-muted hover:text-ink transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <FiSun className="w-4 h-4" /> : <FiMoon className="w-4 h-4" />}
-            </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-1.5 text-ink"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="icon-btn md:hidden"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <FiX className="h-5 w-5" strokeWidth={1.5} />
+            ) : (
+              <FiMenu className="h-5 w-5" strokeWidth={1.5} />
+            )}
+          </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden paper-veil-strong backdrop-blur-md border-b border-line">
-          <div className="px-6 py-4 space-y-1">
+        <div className="mx-auto max-w-[960px] px-6 md:hidden">
+          <div className="menu mb-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-baseline gap-3 py-2 font-mono text-xs tracking-ledger text-muted hover:text-ink transition-colors"
+                className="menu__item"
               >
-                <span className="text-accent tabular">{link.index}</span>
                 {link.label}
               </a>
             ))}
