@@ -224,6 +224,37 @@
     color: var(--ink);
   }
 
+  /* Hide scrollbar on horizontal sliders while keeping scroll */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Continuously running project loop (scroll container, JS-driven) */
+  .marquee {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+  }
+
   /* Translucent surface for the scrolled top bar */
   .veil {
     background: color-mix(in srgb, var(--surface) 82%, transparent);

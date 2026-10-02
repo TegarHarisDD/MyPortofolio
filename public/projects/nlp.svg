@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="NLP news classification app">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c111c"/>
+      <stop offset="1" stop-color="#07090d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+  <rect width="1200" height="750" fill="url(#glow)"/>
+  <g transform="translate(80 70)">
+    <rect width="1040" height="610" rx="18" fill="#0b0e13" stroke="#ffffff" stroke-opacity="0.10"/>
+    <rect width="1040" height="52" rx="18" fill="#131822"/>
+    <rect y="34" width="1040" height="18" fill="#131822"/>
+    <g fill="#ffffff" fill-opacity="0.25" transform="translate(24 20)">
+      <circle cx="0" cy="0" r="6"/><circle cx="24" cy="0" r="6"/><circle cx="48" cy="0" r="6"/>
+    </g>
+    <rect x="120" y="14" width="300" height="24" rx="12" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="142" y="31" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#ffffff" fill-opacity="0.45">textappdemo.streamlit.app</text>
+    <g transform="translate(520 250)" text-anchor="middle">
+      <circle cx="0" cy="0" r="58" fill="#3b82f6" fill-opacity="0.14"/>
+      <circle cx="0" cy="0" r="58" fill="none" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1.5"/>
+      <g fill="none" stroke="#93c5fd" stroke-width="4" stroke-linecap="round">
+        <path d="M-26 -18h52M-26 -4h52M-26 10h34"/>
+        <path d="M-26 24h20"/>
+      </g>
+    </g>
+    <text x="520" y="400" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="550" fill="#f5f5f4">NLP News Classification</text>
+    <text x="520" y="436" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#9b9b9b">Text vectorization &amp; topic classifier · Streamlit demo</text>
+  </g>
+</svg>

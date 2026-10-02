@@ -94,6 +94,49 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "title": "RAG Chat with Your Document",
+      "description": "A retrieval-augmented chat app that answers questions grounded in your own uploaded documents, with citations back to the source pages.",
+      "image": "/MyPortofolio/projects/rag.png",
+      "tags": ["Python", "RAG", "LLM", "Vector Search", "FastAPI"],
+      "url": "https://youtu.be/qCF3XV6N-BM",
+      "linkLabel": "Watch demo",
+      "source": "https://github.com/TegarHarisDD/RAG-ChatWithYourDocument"
+    },
+    {
+      "title": "Company Profile Website",
+      "description": "A responsive company profile site for PT. Mandirijaya Multi Perkasa, built with React and Tailwind CSS, backed by Supabase and shipped through a GitHub Actions pipeline.",
+      "image": "/MyPortofolio/projects/company.jpg",
+      "tags": ["React", "Tailwind CSS", "Supabase", "CI/CD"],
+      "url": "http://tegarharisdd.github.io/CompanyProfileMandirijayaMultiPerkasa/",
+      "linkLabel": "Visit live site"
+    },
+    {
+      "title": "Cats vs Dogs Classification",
+      "description": "An image classifier that tells cats and dogs apart using transfer learning, served through an interactive Streamlit interface with live uploads.",
+      "image": "/MyPortofolio/projects/catsdogs.svg",
+      "tags": ["Python", "TensorFlow", "Transfer Learning", "Streamlit"],
+      "url": "https://catsdogsclassificationapp-9h6hwafbquguahqecyqiy2.streamlit.app/",
+      "linkLabel": "Open app"
+    },
+    {
+      "title": "Obesity Level Prediction",
+      "description": "A machine learning app that estimates obesity levels from lifestyle and biometric inputs, with an interactive prediction form and clear result breakdown.",
+      "image": "/MyPortofolio/projects/obesity.svg",
+      "tags": ["Python", "scikit-learn", "pandas", "Streamlit"],
+      "url": "https://obesitylevelappdeployment-e47a9ba5p2xhlrev764p9l.streamlit.app/",
+      "linkLabel": "Open app"
+    },
+    {
+      "title": "NLP News Classification",
+      "description": "A natural language processing demo that classifies news text into topics using text vectorization and supervised learning.",
+      "image": "/MyPortofolio/projects/nlp.svg",
+      "tags": ["Python", "NLP", "scikit-learn", "Streamlit"],
+      "url": "https://textappdemo-cvera5tunwbx8tqu3nhbvy.streamlit.app/",
+      "linkLabel": "Open app"
+    }
+  ],
   "certifications": [
     {
       "title": "Certificate of Competence (Data Scientist)",
