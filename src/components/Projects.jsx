@@ -118,7 +118,11 @@ export default function Projects() {
   }, [getSetWidth])
 
   const handlePointerDown = (event) => {
-    if (event.pointerType !== 'mouse') return
+    // A new press must not inherit click suppression from an earlier drag.
+    dragRef.current.moved = false
+    if (event.pointerType !== 'mouse' || event.button !== 0) return
+    // Keep links (including their icons and previews) native click targets.
+    if (event.target.closest('a, button, input, select, textarea, [role="button"]')) return
     const track = trackRef.current
     if (!track) return
     draggingRef.current = true
@@ -127,7 +131,6 @@ export default function Projects() {
       startScroll: track.scrollLeft,
       moved: false,
     }
-    track.setPointerCapture?.(event.pointerId)
   }
 
   const handlePointerMove = (event) => {
@@ -135,7 +138,12 @@ export default function Projects() {
     const track = trackRef.current
     if (!track) return
     const dx = event.clientX - dragRef.current.startX
-    if (Math.abs(dx) > 3) dragRef.current.moved = true
+    if (!dragRef.current.moved) {
+      if (Math.abs(dx) <= 5) return
+      dragRef.current.moved = true
+      // Capture only real drags so ordinary clicks still target the links.
+      track.setPointerCapture?.(event.pointerId)
+    }
     track.scrollLeft = dragRef.current.startScroll - dx
     normalize()
   }
@@ -151,7 +159,7 @@ export default function Projects() {
   }
 
   const handleClickCapture = (event) => {
-    if (dragRef.current.moved) {
+    if (dragRef.current.moved && event.detail !== 0) {
       event.preventDefault()
       event.stopPropagation()
       dragRef.current.moved = false
@@ -177,6 +185,9 @@ export default function Projects() {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
+        onPointerLeave={handlePointerUp}
+        onLostPointerCapture={handlePointerUp}
+        onDragStart={(event) => event.preventDefault()}
         onClickCapture={handleClickCapture}
         onScroll={normalize}
         className="marquee no-scrollbar -mx-6 mt-6 cursor-grab touch-pan-x select-none overflow-x-auto pb-2 active:cursor-grabbing"
