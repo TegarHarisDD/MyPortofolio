@@ -109,7 +109,7 @@
       "description": "A responsive company profile site for PT. Mandirijaya Multi Perkasa, built with React and Tailwind CSS, backed by Supabase and shipped through a GitHub Actions pipeline.",
       "image": "/MyPortofolio/projects/company.jpg",
       "tags": ["React", "Tailwind CSS", "Supabase", "CI/CD"],
-      "url": "https://www.mandirijayamultiperkasa.online/",
+      "url": "https://mandirijayamultiperkasa.online/",
       "linkLabel": "Visit live site"
     },
     {
