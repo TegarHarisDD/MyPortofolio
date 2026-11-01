@@ -323,6 +323,40 @@
     }
   }
 
+  .projects-loop {
+    overflow-x: auto;
+  }
+
+  .projects-track {
+    display: flex;
+    width: max-content;
+    animation: projects-scroll 60s linear infinite;
+  }
+
+  .projects-group {
+    display: flex;
+    gap: 24px;
+    padding-right: 24px;
+  }
+
+  .project-card {
+    width: min(340px, 80vw);
+    flex-shrink: 0;
+  }
+
+  .projects-loop:hover .projects-track {
+    animation-play-state: paused;
+  }
+
+  /* Reset the track so keyboard navigation can scroll every original card into view. */
+  .projects-loop:focus-within .projects-track {
+    animation: none;
+  }
+
+  @keyframes projects-scroll {
+    to { transform: translateX(-50%); }
+  }
+
   /* Animated underline for text links */
   .link {
     background-image: linear-gradient(currentColor, currentColor);
@@ -338,6 +372,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .projects-track {
+    animation: none;
+  }
+  .projects-group[aria-hidden="true"] {
+    display: none;
+  }
   html {
     scroll-behavior: auto;
   }
