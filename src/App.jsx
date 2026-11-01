@@ -12,8 +12,9 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div className="relative min-h-[100dvh] bg-surface text-ink">
+      <a href="#main" className="skip-link">Skip to content</a>
       <Navbar />
-      <main className="relative z-10">
+      <main id="main" tabIndex={-1} className="relative z-10">
         <Hero />
         <About />
         <Skills />

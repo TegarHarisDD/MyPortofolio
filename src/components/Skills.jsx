@@ -16,16 +16,16 @@ export default function Skills() {
   return (
     <Section
       id="skills"
-      title="The toolkit, grouped as it's actually used."
+      title="Core Skills"
       intro="Everything that carries a project from interface to data layer and out the door."
     >
-      <div>
+      <div className="grid gap-x-10 md:grid-cols-2">
         {categories.map((cat) => {
           const items = profileData.skills[cat.key]
           return (
             <div
               key={cat.key}
-              className="border-t border-hairline py-6 first:border-t-0 first:pt-0"
+              className="border-t border-hairline py-6"
             >
               <h3 className="text-sm font-medium text-ink">{cat.label}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">

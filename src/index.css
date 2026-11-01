@@ -13,7 +13,7 @@
     --surface: #0a0a0a;
     --surface-input: #1a1a19;
     --surface-chip: #232322;
-    --hairline: oklch(1 0 0 / 0.09);
+    --hairline: oklch(1 0 0 / 0.16);
 
     /* Type */
     --font-sans: "Inter", "Geist", ui-sans-serif, system-ui, -apple-system,
@@ -49,6 +49,10 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  section[id], main[id] {
+    scroll-margin-top: 88px;
   }
 
   body {
@@ -89,6 +93,20 @@
 }
 
 @layer components {
+  .skip-link {
+    position: fixed;
+    top: 8px;
+    left: 24px;
+    z-index: 60;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: var(--on-ink);
+    border-radius: var(--radius-control);
+    transform: translateY(-160%);
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
   /* Type roles */
   .display {
     font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
@@ -113,6 +131,7 @@
 
   /* Buttons */
   .btn {
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -145,8 +164,8 @@
   .icon-btn {
     display: inline-grid;
     place-items: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border: 0;
     border-radius: var(--radius-pill);
     background: transparent;
@@ -169,6 +188,7 @@
 
   /* Selector chip / navigation chip */
   .chip {
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     gap: var(--space-1);
@@ -183,6 +203,7 @@
     transition: background-color 0.15s ease, color 0.15s ease;
   }
   .chip:hover,
+  .chip[aria-current="location"],
   .chip[aria-expanded="true"] {
     background: var(--surface-chip);
     color: var(--ink);
@@ -209,6 +230,7 @@
     box-shadow: 0 8px 32px oklch(0 0 0 / 0.08);
   }
   .menu__item {
+    min-height: 44px;
     display: flex;
     align-items: center;
     gap: var(--space-3);
@@ -219,40 +241,10 @@
     cursor: pointer;
     transition: background-color 0.15s ease, color 0.15s ease;
   }
-  .menu__item:hover {
+  .menu__item:hover,
+  .menu__item[aria-current="location"] {
     background: var(--surface-chip);
     color: var(--ink);
-  }
-
-  /* Hide scrollbar on horizontal sliders while keeping scroll */
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Continuously running project loop (scroll container, JS-driven) */
-  .marquee {
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent,
-      #000 6%,
-      #000 94%,
-      transparent
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent,
-      #000 6%,
-      #000 94%,
-      transparent
-    );
-  }
-  .marquee-track {
-    display: flex;
-    width: max-content;
   }
 
   /* Translucent surface for the scrolled top bar */

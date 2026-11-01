@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="relative z-10 px-6">
-      <div className="mx-auto max-w-[960px] border-t border-hairline py-10">
+      <div className="mx-auto max-w-[1180px] border-t border-hairline py-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <p className="caption">
             © {currentYear} {profileData.name}

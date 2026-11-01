@@ -7,7 +7,7 @@ export default function Certificates() {
   return (
     <Section
       id="certificates"
-      title="Credentials, verified."
+      title="Certifications"
       intro="Certifications and language scores, with validity where applicable."
     >
       <div>

@@ -7,7 +7,7 @@ export default function Education() {
   return (
     <Section
       id="education"
-      title="A computer science foundation."
+      title="Education"
       intro="Formal training in the fundamentals behind everything above."
     >
       <article className="border-t border-hairline pt-8">

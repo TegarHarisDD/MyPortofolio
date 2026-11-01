@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      title="Open to the next build."
+      title="Contact"
       intro="Let's connect about full-stack web development, AI-powered tools, and workflow automation."
     >
       <a href={`mailto:${profileData.email}`} className="btn btn--primary">

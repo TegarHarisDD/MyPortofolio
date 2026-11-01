@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <Section
       id="experience"
-      title="Where the work has been."
+      title="Work Experience"
       intro="Experience in web development, data automation, and quality-checked datasets for AI training."
     >
       <div>
@@ -19,7 +19,7 @@ export default function Experience() {
               <span className="caption tabular-nums">{job.period}</span>
             </div>
 
-            <p className="mt-1 text-sm font-medium text-muted">{job.company}</p>
+            <p className="mt-2 text-base font-medium text-ink">{job.company}</p>
             <p className="caption mt-0.5">{job.location}</p>
 
             <ul className="mt-4 max-w-[65ch] list-disc space-y-2 pl-5 text-sm leading-6 text-muted">
@@ -32,7 +32,7 @@ export default function Experience() {
       </div>
 
       <div className="mt-14">
-        <h3 className="text-sm font-medium text-ink">Organizations</h3>
+        <h3 className="text-sm font-medium text-ink">Organizational Experience</h3>
         <div className="mt-3">
           {profileData.organizations.map((org) => (
             <div
