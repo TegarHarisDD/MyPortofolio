@@ -11,7 +11,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-[1180px] items-center px-6 py-28">
         <div className="w-full max-w-[560px] md:ml-auto md:pl-12">
-          <h1 className="whitespace-nowrap text-[clamp(2rem,8vw,4.75rem)] font-medium leading-[1.05] tracking-display text-ink">
+          <h1 className="text-[clamp(2rem,8vw,4.75rem)] font-medium leading-[1.05] tracking-display text-ink">
             {profileData.name}
           </h1>
 

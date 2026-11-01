@@ -1,8 +1,9 @@
 {
-  "name": "Tegar Haris DD",
-  "title": "Junior Software & AI Engineer",
-  "bio": "Software & AI Engineer with 1 year of experience building full stack web applications with JavaScript, React, and Node.js, and applying artificial intelligence with Python, pandas, and scikit-learn to solve data-driven problems.",
-  "longBio": "Software & AI Engineer with 1 year of experience building full stack web applications with JavaScript, React, and Node.js, and applying artificial intelligence (AI) with Python, pandas, and scikit-learn to solve data-driven problems. Comfortable working across the stack, from accessible UI components to REST APIs, with a growing focus on bringing AI into real-world products. A fast learner who thrives on pair programming, code review, and Agile teamwork, aiming to build a career as an AI Engineer that blends strong software engineering with applied AI.",
+  "name": "Tegar Haris Damai Damarendra",
+  "shortName": "Tegar Haris DD",
+  "title": "Computer Science Graduate | Full-Stack Web, AI & Automation",
+  "bio": "Computer Science graduate interested in building practical software, from full-stack web applications to AI-powered tools and automated workflows. Working with React, Node.js, FastAPI, and Supabase, with experience integrating LLM APIs and automating processes with n8n.",
+  "longBio": "Computer Science graduate with a strong interest in building practical software, from full-stack web applications to AI-powered tools and automated workflows. Comfortable working across the stack with React, Node.js, FastAPI, and Supabase, and familiar with integrating LLM APIs and automating processes with n8n. Also skilled in machine learning fundamentals, including audio-based emotion classification with deep learning. Detail-oriented and collaborative, with a focus on data quality, clear documentation, and clean, maintainable solutions.",
   "email": "tegarharisdd@gmail.com",
   "phone": "+62 857-1247-0617",
   "location": "Patukangan, Kendal, Central Java, Indonesia",
@@ -11,9 +12,11 @@
   "profileImage": "/MyPortofolio/profile.png",
   "skills": {
     "programmingLanguages": [
+      "Python",
       "JavaScript",
       "TypeScript",
-      "Python",
+      "Go (Golang)",
+      "SQL",
       "C++"
     ],
     "markupStyles": [
@@ -28,7 +31,20 @@
     "backend": [
       "Node.js",
       "FastAPI",
+      "Django",
       "Supabase"
+    ],
+    "aiAutomation": [
+      "RAG",
+      "LLM API",
+      "LangChain",
+      "LangGraph",
+      "n8n",
+      "Zapier",
+      "AI Agent",
+      "Machine Learning",
+      "NLP",
+      "Computer Vision"
     ],
     "databases": [
       "MongoDB",
@@ -40,14 +56,14 @@
     "tools": [
       "Git",
       "GitHub / GitLab",
-      "Docker (basics)",
+      "Docker (basic)",
       "Vercel",
       "GitHub Actions (CI/CD)",
       "Streamlit",
       "Render"
     ],
     "languages": [
-      "Bahasa Indonesia (Native)",
+      "Indonesian (Native)",
       "English (Advanced)"
     ]
   },
@@ -56,7 +72,8 @@
     "university": "Dian Nuswantoro University",
     "location": "Semarang, Indonesia",
     "year": "2022 – 2026",
-    "gpa": "3.71 / 4.00"
+    "gpa": "3.71 / 4.00",
+    "thesis": "Voice-Based Emotion Classification Using 1D Convolutional Neural Network and MFCC Features (Klasifikasi Emosi Berdasarkan Suara dengan 1D Convolutional Neural Network dan Fitur MFCC)"
   },
   "experience": [
     {
@@ -65,20 +82,8 @@
       "company": "English Data Project",
       "location": "Surakarta (Full-Time)",
       "points": [
-        "Labeled and annotated large-scale datasets in accordance with defined project guidelines.",
-        "Consistently validated content accuracy against quality standards and deadlines, ensuring high-integrity training data."
-      ]
-    },
-    {
-      "role": "Data Automation Intern",
-      "period": "Jul 2025",
-      "company": "BPS (Badan Pusat Statistik), Semarang City",
-      "location": "Semarang (Internship)",
-      "points": [
-        "Designed and developed an automated Telegram chatbot prototype using n8n workflow automation.",
-        "Integrated the chatbot with an LLM (Large Language Model) API to generate efficient, data-driven, and interactive automated responses.",
-        "Configured Webhook and ngrok for real-time data exchange between the chatbot and backend services.",
-        "Tools: Excel, Python, n8n, Telegram Bot API, Webhook, ngrok."
+        "Annotated and quality-checked large-scale English datasets for AI training, meeting accuracy standards and deadlines.",
+        "Built a strong grasp of data quality and labeling consistency, applicable to LLM evaluation and RAG work."
       ]
     },
     {
@@ -89,8 +94,19 @@
       "points": [
         "Designed and developed a responsive company profile website using React and Tailwind CSS.",
         "Built and managed the backend database using Supabase (PostgreSQL).",
-        "Set up a CI/CD pipeline with GitHub Actions for automated deployment.",
-        "Live project: https://mandirijayamultiperkasa.online/"
+        "Live project: https://www.mandirijayamultiperkasa.online/"
+      ]
+    },
+    {
+      "role": "Data Automation Intern",
+      "period": "Jul 2025",
+      "company": "BPS (Badan Pusat Statistik), Semarang City",
+      "location": "Semarang (Internship)",
+      "points": [
+        "Designed and developed an automated Telegram chatbot prototype using n8n workflow automation.",
+        "Integrated the chatbot with an LLM API to generate efficient, data-driven, and interactive automated responses.",
+        "Configured Webhook and ngrok for real-time data exchange between the chatbot and backend services.",
+        "Tools: Google Apps Script (Sheet API), Gemini API, Python, n8n, Telegram Bot API, Webhook, ngrok."
       ]
     }
   ],
@@ -106,10 +122,10 @@
     },
     {
       "title": "Company Profile Website",
-      "description": "A responsive company profile site for PT. Mandirijaya Multi Perkasa, built with React and Tailwind CSS, backed by Supabase and shipped through a GitHub Actions pipeline.",
+      "description": "A responsive company profile website for PT. Mandirijaya Multi Perkasa, built with React and Tailwind CSS, with a Supabase (PostgreSQL) backend database.",
       "image": "/MyPortofolio/projects/company.jpg",
-      "tags": ["React", "Tailwind CSS", "Supabase", "CI/CD"],
-      "url": "https://mandirijayamultiperkasa.online/",
+      "tags": ["React", "Tailwind CSS", "Supabase", "PostgreSQL"],
+      "url": "https://www.mandirijayamultiperkasa.online/",
       "linkLabel": "Visit live site"
     },
     {
@@ -157,12 +173,14 @@
   ],
   "organizations": [
     {
-      "name": "Dinus Robotic Club",
-      "role": "Member (2023–2026)"
+      "name": "IEEE Student Branch",
+      "role": "Chair (2025–2026) | Member (2024–2025)",
+      "description": "iSemantic Committee (2023–2025): reviewed papers, prepared documents such as the proceedings, organized Student Branch members, and coordinated with lecturers."
     },
     {
-      "name": "IEEE Student Branch",
-      "role": "Member (2024–2025), Chair (2025–2026)"
+      "name": "Dinus Robotic Club",
+      "role": "Member (2023–2026)",
+      "description": "Competed in KRAI 2024 (Indonesian Robot Contest); developed the object detection system using YOLO."
     }
   ]
 }

@@ -7,6 +7,7 @@ export default function Skills() {
     { key: 'markupStyles', label: 'Markup and stylesheets' },
     { key: 'frontend', label: 'Frontend' },
     { key: 'backend', label: 'Backend' },
+    { key: 'aiAutomation', label: 'AI and automation' },
     { key: 'databases', label: 'Databases' },
     { key: 'tools', label: 'Tools and practices' },
     { key: 'languages', label: 'Languages' },

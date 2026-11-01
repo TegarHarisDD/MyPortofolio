@@ -13,7 +13,7 @@ export default function Contact() {
     <Section
       id="contact"
       title="Open to the next build."
-      intro="Looking for a junior engineer who can move between the front end and applied AI? Start with an email."
+      intro="Let's connect about full-stack web development, AI-powered tools, and workflow automation."
     >
       <a href={`mailto:${profileData.email}`} className="btn btn--primary">
         Email me

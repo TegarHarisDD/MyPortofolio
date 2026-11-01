@@ -2,7 +2,7 @@ import Section from './Section'
 import profileData from '../data/profile.json'
 
 export default function Education() {
-  const { degree, university, location, year, gpa } = profileData.education
+  const { degree, university, location, year, gpa, thesis } = profileData.education
 
   return (
     <Section
@@ -25,6 +25,9 @@ export default function Education() {
             <dd className="text-sm tabular-nums text-ink">{gpa}</dd>
           </div>
         </dl>
+        <p className="mt-6 max-w-[65ch] text-sm leading-6 text-muted">
+          <span className="font-medium text-ink">Thesis: </span>{thesis}
+        </p>
       </article>
     </Section>
   )

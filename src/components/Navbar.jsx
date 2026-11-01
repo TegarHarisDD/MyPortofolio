@@ -37,7 +37,7 @@ export default function Navbar() {
             href="#home"
             className="text-[15px] font-strong tracking-body text-ink"
           >
-            {profileData.name}
+            {profileData.shortName}
           </a>
 
           <div className="hidden items-center gap-1 md:flex">

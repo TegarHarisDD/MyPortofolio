@@ -6,7 +6,7 @@ export default function Experience() {
     <Section
       id="experience"
       title="Where the work has been."
-      intro="A year across data annotation, automation, and full stack web, each role adding a layer to the same stack."
+      intro="Experience in web development, data automation, and quality-checked datasets for AI training."
     >
       <div>
         {profileData.experience.map((job, index) => (
@@ -41,6 +41,7 @@ export default function Experience() {
             >
               <h4 className="text-base text-ink">{org.name}</h4>
               <p className="caption">{org.role}</p>
+              <p className="mt-2 w-full max-w-[65ch] text-sm leading-6 text-muted">{org.description}</p>
             </div>
           ))}
         </div>
