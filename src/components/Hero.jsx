@@ -9,7 +9,7 @@ export default function Hero() {
 
       <div className="grid-bg" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto flex min-h-[85svh] w-full max-w-[1180px] items-center px-6 py-32 md:min-h-[90svh]">
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-[1180px] items-center px-6 py-32">
         <div className="w-full md:ml-auto md:w-1/2 md:pl-10">
           <h1 className="text-balance text-[clamp(2rem,8vw,4rem)] font-medium leading-[1.05] tracking-display text-ink">
             {profileData.shortName}
@@ -17,6 +17,10 @@ export default function Hero() {
 
           <p className="mt-4 text-2xl leading-8 tracking-title text-muted">
             {profileData.title}
+          </p>
+
+          <p className="mt-6 max-w-[65ch] text-base leading-7 text-muted">
+            {profileData.longBio}
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">

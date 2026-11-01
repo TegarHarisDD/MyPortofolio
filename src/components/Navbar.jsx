@@ -29,7 +29,6 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { label: 'Professional Summary', href: '#about' },
     { label: 'Core Skills', href: '#skills' },
     { label: 'Work Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
