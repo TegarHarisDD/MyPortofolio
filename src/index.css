@@ -324,7 +324,7 @@
   }
 
   .projects-loop {
-    overflow-x: auto;
+    overflow: clip;
   }
 
   .projects-track {
@@ -344,12 +344,14 @@
     flex-shrink: 0;
   }
 
-  .projects-loop:hover .projects-track {
-    animation-play-state: paused;
+  .projects-loop:focus-visible,
+  .projects-loop:has(:focus-visible) {
+    overflow-x: auto;
   }
 
   /* Reset the track so keyboard navigation can scroll every original card into view. */
-  .projects-loop:focus-within .projects-track {
+  .projects-loop:focus-visible .projects-track,
+  .projects-loop:has(:focus-visible) .projects-track {
     animation: none;
   }
 
@@ -372,6 +374,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .projects-loop {
+    overflow-x: auto;
+  }
   .projects-track {
     animation: none;
   }
